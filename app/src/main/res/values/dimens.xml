@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cornerRadius">10dp</dimen>
+    <dimen name="insetLeft">25dp</dimen>
+    <dimen name="insetRight">25dp</dimen>
+</resources>

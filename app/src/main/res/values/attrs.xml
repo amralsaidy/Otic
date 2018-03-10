@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BoardView">
+        <attr name="boardRadius" format="integer" />
+        <attr name="shadowColor" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_ll_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical"
+    tools:context="com.asb.otic.ui.activity.SettingsActivity">
+
+    <View
+        android:id="@+id/status_bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/md_grey_700" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_iv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_back" />
+
+        <com.asb.otic.ui.custom.CTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/md_black_1000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@color/md_grey_900" />-->
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/md_black_1000" />
+
+    <!--<include layout="@layout/toolbar_sub" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <com.asb.otic.ui.custom.CTextView
+                    android:id="@+id/game_settings_ctv_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/game_settings"
+                    android:textColor="@color/md_pink_500"
+                    android:textSize="20sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:id="@+id/choose_languge_ctv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/choose_language"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/english_rbtn_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:checked="true"
+                                android:text="@string/english"
+                                app:buttonTint="@color/md_black_1000" />
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/arabic_rbtn_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="10dp"
+                                android:text="@string/arabic"
+                                app:buttonTint="@color/md_black_1000" />
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/choose_prefere_colors"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/group1_color_fl_id"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/color1_group1_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|start"
+                                android:background="@color/md_teal_500" />
+
+                            <TextView
+                                android:id="@+id/color2_group1_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|end"
+                                android:background="@color/md_teal_300" />
+
+                            <TextView
+                                android:id="@+id/color3_group1_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|start"
+                                android:background="@color/md_yellow_A700" />
+
+                            <TextView
+                                android:id="@+id/color4_group1_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|end"
+                                android:background="@color/md_teal_A700" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/group2_color_fl_id"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/color1_group2_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|start"
+                                android:background="@color/md_red_A400" />
+
+                            <TextView
+                                android:id="@+id/color2_group2_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|end"
+                                android:background="@color/md_red_A100" />
+
+                            <TextView
+                                android:id="@+id/color3_group2_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|start"
+                                android:background="@color/md_yellow_A400" />
+
+                            <TextView
+                                android:id="@+id/color4_group2_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|end"
+                                android:background="@color/md_blue_A400" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/group3_color_fl_id"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/color1_group3_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|start"
+                                android:background="@color/md_blue_grey_500" />
+
+                            <TextView
+                                android:id="@+id/color2_group3_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|end"
+                                android:background="@color/md_blue_grey_200" />
+
+                            <TextView
+                                android:id="@+id/color3_group3_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|start"
+                                android:background="@color/md_yellow_A400" />
+
+                            <TextView
+                                android:id="@+id/color4_group3_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|end"
+                                android:background="@color/md_blue_A400" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/group4_color_fl_id"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="vertical"
+                            android:padding="1dp">
+
+                            <TextView
+                                android:id="@+id/color1_group4_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|start"
+                                android:background="@color/md_red_A400" />
+
+                            <TextView
+                                android:id="@+id/color2_group4_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="top|end"
+                                android:background="@color/md_brown_400" />
+
+                            <TextView
+                                android:id="@+id/color3_group4_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|start"
+                                android:background="@color/md_yellow_A400" />
+
+                            <TextView
+                                android:id="@+id/color4_group4_tv_id"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="bottom|end"
+                                android:background="@color/md_blue_A400" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/sound_effects"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/sound_sw_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center"
+                        android:text="@string/default_device_name"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/device_name_tv_id"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:background="@color/md_grey_100"
+                        android:gravity="center"
+                        android:text="Android"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="20sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|center"
+                        android:text="@string/default_your_name"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/your_name_tv_id"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:background="@color/md_grey_100"
+                        android:gravity="center"
+                        android:text="Amr"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="20sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/md_grey_500" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/default_board_size"
+                        android:textColor="@color/md_grey_900"
+                        android:textSize="16sp" />
+
+                    <FrameLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end">
+
+                        <SeekBar
+                            android:id="@+id/board_radius_sb_id"
+                            android:layout_width="110dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:max="3" />
+
+                        <TextView
+                            android:id="@+id/board_radius_et_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="20sp" />
+
+                    </FrameLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_grey_300" />
+
+            <com.asb.otic.ui.custom.CTextView
+                android:id="@+id/best_scores_ctv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/best_scores"
+                android:textColor="@color/md_pink_500"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_grey_300" />
+
+            <com.asb.otic.ui.custom.CTextView
+                android:id="@+id/about_game_ctv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/about_game"
+                android:textColor="@color/md_pink_500"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_grey_300" />
+
+            <com.asb.otic.ui.custom.CTextView
+                android:id="@+id/how_to_play_ctv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/how_to_play"
+                android:textColor="@color/md_pink_500"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_grey_300" />
+
+            <com.asb.otic.ui.custom.CTextView
+                android:id="@+id/game_info_ctv_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/game_info"
+                android:textColor="@color/md_pink_500"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/md_grey_300" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

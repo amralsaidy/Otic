@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fl_id"
+    style="@android:style/TextAppearance.DeviceDefault.Medium"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.asb.otic.ui.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/logo" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="4"
+            android:background="@drawable/background_shape">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:id="@+id/name1_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/enter_your_name"
+                        android:textColor="@color/md_red_200" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/player_one_name_et_id"
+                        android:layout_width="200dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="1"
+                        android:hint="@string/your_name"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        android:textColorHint="@color/md_grey_100"
+                        app:backgroundTint="@color/md_white_1000" />
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:id="@+id/type_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/choose_player_type"
+                        android:textColor="@color/md_yellow_300" />
+
+                    <RadioGroup
+                        android:id="@+id/player_type_rg_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:visibility="visible">
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/android_rbtn_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/android"
+                            android:textColor="@color/md_white_1000"
+                            app:buttonTint="@color/md_white_1000" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/friend_rbtn_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/friend"
+                            android:textColor="@color/md_white_1000"
+                            app:buttonTint="@color/md_white_1000" />
+
+                        <android.support.v7.widget.AppCompatRadioButton
+                            android:id="@+id/bluetooth_rbtn_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bluetooth"
+                            android:textColor="@color/md_white_1000"
+                            app:buttonTint="@color/md_white_1000" />
+
+                    </RadioGroup>
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:id="@+id/name2_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/other_player_name"
+                        android:textColor="@color/md_yellow_300" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/player_two_name_et_id"
+                        android:layout_width="200dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="40dp"
+                        android:layout_weight="1"
+                        android:hint="@string/other_player_name"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textAllCaps="false"
+                        android:textColor="@color/md_white_1000"
+                        android:textColorHint="@color/md_grey_100"
+                        app:backgroundTint="@color/md_white_1000" />
+
+
+                    <com.asb.otic.ui.custom.CTextView
+                        android:id="@+id/size_tv_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.5"
+                        android:text="@string/choose_board_size"
+                        android:textColor="@color/md_yellow_300" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <SeekBar
+                            android:id="@+id/board_radius_sb_id"
+                            android:layout_width="210dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:max="3"
+                            android:progressDrawable="@drawable/seek" />
+
+                        <TextView
+                            android:id="@+id/board_radius_et_id"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="2"
+                            android:textColor="@color/md_white_1000" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/settings_iv_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_settings" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/play_btn_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/play"
+                android:textAllCaps="false"
+                android:textColor="@color/opacity50"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone">
+
+    </ProgressBar>
+</FrameLayout>

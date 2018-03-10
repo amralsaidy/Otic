@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "176036865215",
+    "firebase_url": "https://otic-56692.firebaseio.com",
+    "project_id": "otic-56692",
+    "storage_bucket": "otic-56692.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176036865215:android:f8fca8a6bdd0f4f8",
+        "android_client_info": {
+          "package_name": "com.asb.otic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176036865215-0t7gcemjbehniji5ullbp4cd6j45ikh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asb.otic",
+            "certificate_hash": "7509e1b59fa3d4c8364b5874c593a02a20114bda"
+          }
+        },
+        {
+          "client_id": "176036865215-fh2oau3h2qesu5v7cjj42skdq8b0m4qb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJfTfe9uNRn7dLt85QG0cP8PyKZHfWDMs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176036865215-fh2oau3h2qesu5v7cjj42skdq8b0m4qb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_info_ll_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_black_1000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo2" />
+
+        <com.asb.otic.ui.custom.CTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/version"
+            android:textColor="@color/md_white_1000"
+            android:textSize="25sp" />
+
+        <com.asb.otic.ui.custom.CTextView1
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1.0"
+            android:textColor="@color/md_white_1000"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/md_white_1000" />
+
+        <com.asb.otic.ui.custom.CTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/developed_by"
+            android:textColor="@color/md_white_1000"
+            android:textSize="25sp" />
+
+        <com.asb.otic.ui.custom.CTextView1
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/email"
+            android:textColor="@color/md_white_1000"
+            android:textSize="18sp"
+            android:autoLink="email"
+            android:textColorLink="@color/md_grey_300"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/md_white_1000" />
+
+        <Button
+            android:id="@+id/rate_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:text="@string/rate_otic"
+            android:textAllCaps="false"
+            android:textColor="@color/md_brown_900"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/share_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/share_otic"
+            android:textAllCaps="false"
+            android:textColor="@color/md_brown_900"
+            android:textSize="22sp" />
+    </LinearLayout>
+</LinearLayout>
