@@ -1,2 +1,2 @@
 # Otic
-Full Simple Android Game Source code 
+Simple Android Game Source code 
